@@ -4,13 +4,19 @@ name: Shell Commands
 on: [push]
 
 jobs:
-  run-shell-commands:
+  simple-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: say hello
-        run: echo "Hello World from GitHub Actions"
-      - name: try multi-line
+      - name: say hello with bash shell
+        run: echo "Hello World from GitHub Actions (default bash shell)"
+      - name: try multi-line with bash shell
         run: |
-          echo "Hello World 1"
-          echo "Hello World 2"
-          echo "Hello World 3"
+          echo "Hello World multi-line 1"
+          echo "Hello World multi-line 2"
+          echo "Hello World multi-line 3"
+      - name: say hello with python as the shell
+        run: |
+          import sys
+          print("Hello World from python")
+          print(f"python version: {sys.version}")
+        shell: python
