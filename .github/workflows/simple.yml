@@ -1,0 +1,16 @@
+---
+name: Shell Commands
+
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "Hello World from GitHub Actions"
+      - name: try multi-line
+        run: |
+          echo "Hello World 1"
+          echo "Hello World 2"
+          echo "Hello World 3"
