@@ -1,0 +1,19 @@
+---
+name: Checkout Demo
+
+on: [push]
+
+jobs:
+  checkout-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show path and files before checkout
+        run: |
+          pwd
+          ll
+      - name: checkout 
+        uses: actions/checkout@v1
+      - name: show path and files after checkout
+        run: |
+          pwd
+          ll
