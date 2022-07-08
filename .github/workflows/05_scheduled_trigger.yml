@@ -1,12 +1,12 @@
 ---
-name: Scheduled Trigger
+name: Scheduled on Trigger
 
 on:
   schedule:
     - cron: "40 11 * * *"
 
 jobs:
-  checkout-demo:
+  scheduled-trigger:
     runs-on: ubuntu-latest
     steps:
       - name: should run on the scheduled cron time (UTC)

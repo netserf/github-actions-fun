@@ -1,14 +1,13 @@
 ---
-name: Granular on triggers
+name: Granular on Triggers
 
 on:
   pull_request:
     types: [closed, assigned, opened, reopened]
 
 jobs:
-  checkout-demo:
+  granular-triggers:
     runs-on: ubuntu-latest
     steps:
       - name: should run on the pull request types above
         run: echo "trying out granular pull request triggers"
-
