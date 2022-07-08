@@ -1,0 +1,16 @@
+---
+name: Scheduled Trigger
+
+on:
+  schedule:
+    - cron: "40 11 * * *"
+
+jobs:
+  checkout-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: should run on the scheduled cron time (UTC)
+        run: |
+          echo "trying out scheduled triggers"
+          echo "note - for cron schedules: https://crontab.guru"
+
