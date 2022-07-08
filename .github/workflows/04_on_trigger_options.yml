@@ -1,5 +1,5 @@
 ---
-name: Checkout Demo
+name: Granular on triggers
 
 on:
   pull_request:
