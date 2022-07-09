@@ -1,0 +1,24 @@
+---
+name: On Demand Trigger
+
+on:
+  repository_dispatch:
+    types: [on-demand-test]
+
+jobs:
+  scheduled-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: should run when dispatch api triggerred
+        run: |
+          echo "trying out on-demand triggers"
+          echo "unit: ${{ github.event.client_payload.unit }}"
+          echo "integration: ${{ github.event.client_payload.integration }}"
+
+# TODO - add to docs
+#  curl \
+#  -X POST \
+#  -H "Accept: application/vnd.github+json" \ 
+#  -H "Authorization: token <TOKEN>" \
+#  https://api.github.com/repos/OWNER/REPO/dispatches \
+#  -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'

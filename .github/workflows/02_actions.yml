@@ -14,4 +14,3 @@ jobs:
           who-to-greet: netserf
       - name: log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
-
