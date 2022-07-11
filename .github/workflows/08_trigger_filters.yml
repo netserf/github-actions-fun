@@ -9,14 +9,17 @@ on:
       - main
       - 'feat/*'   # matches all text except another /
       - 'fix//*'   # matches all text including another /
-    tags:
-      - v1.*
-    paths:
-      - '**.js'
-      - '!filename.js'   # excludes files
-
-    # also branches-ignore:
-    # also paths-ignore:
+      
+    # note - There are other filter options such as tags, paths, and 
+    #        ignore options as well. If these other filters are employed
+    #        then all conditions must be satisfied to trigger the filter.
+    # tags:
+    #   - v1.*
+    # paths:
+    #   - '**.js'
+    #   - '!filename.js'   # excludes files
+    # branches-ignore: []
+    # paths-ignore: []
 
 jobs:
   trigger-filter:
@@ -24,4 +27,3 @@ jobs:
     steps:
       - name: playing with trigger filters
         run: echo "Playing with trigger filters"
- 
