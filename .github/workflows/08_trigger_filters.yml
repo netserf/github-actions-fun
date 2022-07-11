@@ -1,0 +1,27 @@
+---
+name: Trigger Filters
+
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+
+on:
+  push:
+    branches:
+      - main
+      - 'feat/*'   # matches all text except another /
+      - 'fix//*'   # matches all text including another /
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
+      - '!filename.js'   # excludes files
+
+    # also branches-ignore:
+    # also paths-ignore:
+
+jobs:
+  trigger-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: playing with trigger filters
+        run: echo "Playing with trigger filters"
+ 
