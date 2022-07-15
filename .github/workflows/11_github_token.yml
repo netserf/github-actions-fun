@@ -23,3 +23,8 @@ jobs:
           git fetch
           echo "after fetch:"
           ls -a
+          git checkout main
+          git branch --set-upstream-to=origin/main
+          git pull
+          echo "after pull:"
+          ls -a
