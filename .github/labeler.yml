@@ -1,0 +1,4 @@
+---
+# add 'docs' label on any change to README.md
+docs:
+  - README.md

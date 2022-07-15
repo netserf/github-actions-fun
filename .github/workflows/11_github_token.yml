@@ -1,0 +1,27 @@
+name: Playing with GITHUB_TOKEN
+
+on: [pull_request]
+
+jobs:
+  play-with-github-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate labels based on .github/labeler.yml
+        uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: fetch this repo the long way
+        run: |
+          pwd
+          echo "before fetch:"
+          ls -a
+          git config --global init.defaultBranch main
+          git config --global user.email "bot@bot.com"
+          git config --global user.name "bot"
+          git init
+          git remote add origin \
+            "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+          git fetch
+          git checkout main
+          echo "after fetch:"
+          ls -a
