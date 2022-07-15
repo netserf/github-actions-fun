@@ -21,12 +21,7 @@ jobs:
           git init
           git remote add origin \
             "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
-          git branch
           git fetch
           git checkout main
           echo "after fetch:"
-          ls -a
-          git branch --set-upstream-to=origin/main
-          git pull
-          echo "after pull:"
           ls -a
