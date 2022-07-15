@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: decrypt file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" \
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE"
           --output $HOME/decrypted.json my_secret.json.gpg
         env:
           PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
