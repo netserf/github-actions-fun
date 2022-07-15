@@ -19,9 +19,9 @@ jobs:
           git config --global user.email "bot@bot.com"
           git config --global user.name "bot"
           git init
-          git branch -m master main
           git remote add origin \
             "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+          git branch
           git fetch
           echo "after fetch:"
           ls -a
