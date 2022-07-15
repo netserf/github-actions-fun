@@ -16,5 +16,5 @@ jobs:
         env:
           PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: print file contents
-        run: cat $HOME/decrypte.json
+        run: cat $HOME/decrypted.json
         # note - don't expose this in real situations, but fine here for demo purposes
