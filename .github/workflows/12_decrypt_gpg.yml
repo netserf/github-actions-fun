@@ -1,0 +1,20 @@
+name: Decrypt GPG encrypted file
+
+on: [pull_request]
+
+# encrypt file with: gpg --symmetric --cipher-algo AES256 my_secret.json
+# configure GPG_PASSPHRASE in repo settings
+
+jobs:
+  decrypt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: decrypt file
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE"
+          --output $HOME/decrypted.json my_secret.json.gpg
+        env:
+          PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      - name: print file contents
+        run: cat $HOME/decrypted.json
+        # note - don't expose this in real situations, but fine here for demo purposes
