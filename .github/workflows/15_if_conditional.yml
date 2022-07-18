@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - name: only push
-        run: echo 'only run on a push event'
+      - name: only push event
+        run: |
+          echo 'only run on a push event'
+          echo 'event_name:  ${{ github.event_name }}'
+        continue-on-error: true
   conditions-for-failures:
     runs-on: ubuntu-latest
     steps:
