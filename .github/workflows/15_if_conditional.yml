@@ -15,12 +15,13 @@ jobs:
           echo 'event_name:  ${{ github.event_name }}'
   conditions-for-failures:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    # continue-on-error: true
     steps:
       - name: guaranteed failure
         run: |
-          echo 'this step is guaranteed to fail'
-          false
+          echo 'this step is should pass'
+          # echo 'this step is guaranteed to fail'
+          # false
       - name: only execute if the previous step failed
         if: failure()
         run: echo 'the last step failed'
