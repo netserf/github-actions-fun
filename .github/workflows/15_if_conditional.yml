@@ -13,9 +13,9 @@ jobs:
         run: |
           echo 'only run on a push event'
           echo 'event_name:  ${{ github.event_name }}'
-        continue-on-error: true
   conditions-for-failures:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: guaranteed failure
         run: |
