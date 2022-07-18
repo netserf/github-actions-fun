@@ -1,5 +1,5 @@
 name: Contexts
-# illustrates functions and contexts to access github actions objects
+# illustrates contexts to access github actions objects
 
 on: push
 
