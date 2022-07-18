@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     # continue-on-error: true
     steps:
-      - name: guaranteed failure
+      # - name: guaranteed failure
+      - name: guaranteed success
         run: |
           echo 'this step is should pass'
           # echo 'this step is guaranteed to fail'
