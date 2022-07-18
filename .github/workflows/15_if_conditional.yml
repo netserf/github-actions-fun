@@ -1,0 +1,26 @@
+name: Conditional
+# illustrates GitHub Actions conditional logic
+
+on: [push, pull_request]
+
+# note: do not need the curly braces to evaluate the 'if' condition
+jobs:
+  only-push-event:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: only push
+        run: echo 'only run on a push event'
+  conditions-for-failures:
+    runs-on: ubuntu-latest
+    steps:
+      - name: guaranteed failure
+        run: |
+          echo 'this step is guaranteed to fail'
+          false
+      - name: only execute if the previous step failed
+        if: failure()
+        run: echo 'the last step failed'
+      - name: always run regardless of the previous step
+        if: always()
+        run: echo 'this step will always run'
