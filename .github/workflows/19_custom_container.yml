@@ -1,0 +1,23 @@
+name: Custom Containers
+on: push
+
+jobs:
+  docker-steps:
+    runs-on: ubuntu-latest
+    container:
+      image: node:10.18.0-jessie
+    steps:
+      - name: Log node version
+        run: node -v
+      # customize container behaviour at runtime
+      - name: Try hello world with custom container
+        uses: docker://node:12.14.1-alpine3.10
+        with:
+          entrypoint: "/bin/echo"
+          args: "Hello World"
+      # customize container behaviour at runtime
+      - name: Log node version from custom container
+        uses: docker://node:12.14.1-alpine3.10
+        with:
+          entrypoint: /usr/local/bin/node
+          args: -v
