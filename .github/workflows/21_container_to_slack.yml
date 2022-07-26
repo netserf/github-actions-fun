@@ -16,3 +16,4 @@ jobs:
           SLACK_MESSAGE: "Hello Slack"
           SLACK_CHANNEL: "alerts"
           SLACK_USERNAME: "GitHub Actions"
+          SLACK_ICON: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/OpenMoji-color_1F916.svg/240px-OpenMoji-color_1F916.svg.png
