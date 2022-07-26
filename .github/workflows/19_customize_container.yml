@@ -1,4 +1,4 @@
-name: Custom Containers
+name: Customize Container
 on: push
 
 jobs:
