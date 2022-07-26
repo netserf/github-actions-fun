@@ -1,0 +1,18 @@
+name: Script in Container
+on: push
+
+jobs:
+  docker-steps:
+    runs-on: ubuntu-latest
+    container:
+      image: node:10.18.0-jessie
+    steps:
+      - name: Log node version
+        run: node -v
+      - name: Checkout repo
+        uses: actions/checkout@v1
+      - name: Run a script
+        uses: docker://node:12.14.1-alpine3.10
+        with:
+          entrypoint: ./script.sh
+          args: "Some string"
