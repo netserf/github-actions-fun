@@ -6,6 +6,7 @@
 # the .github/workflows directory.
 
 workflow="$1"
+workflow_dir=".github/workflows"
 
 if [ -z "${workflow}" ]; then
   echo "Usage: $0 <github-actions-workflow-yaml>"
@@ -17,7 +18,14 @@ if [ ! -f "$workflow" ]; then
     exit 1
 fi
 
-rm .github/workflows/*.yml
-cp "$workflow" .github/workflows/
+count=`ls -1 $workflow_dir/*.yml 2>/dev/null | wc -l`
+if [ $count != 0 ]; then
+  echo "Removing previous workflows..."
+  rm $workflow_dir/*.yml
+fi 
+
+
+echo "Copying new workflow to $workflow_dir ..."
+cp "$workflow" $workflow_dir/
 
 exit 0
