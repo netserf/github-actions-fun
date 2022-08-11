@@ -30,6 +30,22 @@ files.
 * A workflow that demonstrates the `uses:` statement to execute a GitHub Action
 * Publically available GitHub Actions may be found in the [Actions Marketplace](https://github.com/marketplace?type=actions)
 
+## 3. Serializing dependent steps with `needs:`
+
+```bash
+./try_workflow.sh workflows/03_needs.yml
+```
+
+* **Workflow**: [03_needs.yml](workflows/03_needs.yml)
+* **References**:
+  * [jobs.<job_id>.needs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
+  * [jobs.<job_id>.steps[*].id](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsid)
+  * [contexts](https://docs.github.com/en/actions/learn-github-actions/contexts)
+* A workflow that demonstrates the `needs:` statement to serialize dependent jobs
+* Dependent jobs can be stated as a string or an array of strings
+* This example also illustrates marking a step with an `id:` attribute. These
+  step id's can be used to reference different step contexts during execution
+
 ## Attribution
 
 TODO
