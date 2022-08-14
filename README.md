@@ -59,6 +59,22 @@ files.
   workflow can access it
 * Once of many ready-made GitHub Actions to simplify your workflow
 
+## 5. Trigger options for GitHub Actions
+
+```bash
+
+```bash
+./try_workflow.sh workflows/05_on_trigger_options.yml
+```
+
+* **Workflow**: [05_on_trigger_options.yml](workflows/05_on_trigger_options.yml)
+* **References**:
+  * [trigger filters](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#using-filters)
+* An example that shows how to filter the GHA triggers so only a subset of
+  events will trigger the workflow
+* In this case the pull requests are filtered down to subset of events that are
+  listed in the `types:` array
+
 ## Attribution
 
 TODO
