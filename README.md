@@ -46,6 +46,19 @@ files.
 * This example also illustrates marking a step with an `id:` attribute. These
   step id's can be used to reference different step contexts during execution
 
+## 4. Checkout your GitHub repository
+
+```bash
+./try_workflow.sh workflows/04_checkout.yml
+```
+
+* **Workflow**: [04_checkout.yml](workflows/04_checkout.yml)
+* **References**:
+  * [actions/checkout](https://github.com/actions/checkout)
+* An action that checks-out your repository into $GITHUB_WORKSPACE, so your
+  workflow can access it
+* Once of many ready-made GitHub Actions to simplify your workflow
+
 ## Attribution
 
 TODO
