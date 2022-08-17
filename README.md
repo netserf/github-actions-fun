@@ -90,12 +90,12 @@ files.
   request:
 
 ```bash
-# curl \
-# -X POST \
-# -H "Accept: application/vnd.github+json" \
-# -H "Authorization: token <TOKEN>" \
-# <https://api.github.com/repos/OWNER/REPO/dispatches> \
-# -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
+curl \
+-X POST \
+-H "Accept: application/vnd.github+json" \
+-H "Authorization: token <TOKEN>" \
+<https://api.github.com/repos/OWNER/REPO/dispatches> \
+-d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
 ```
 
 * Note that the `event_type` in the POST request must match one of the `types:`
