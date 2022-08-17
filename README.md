@@ -75,6 +75,32 @@ files.
 * In this case the pull requests are filtered down to subset of events that are
   listed in the `types:` array
 
+## 6. Trigger workflow on-demand
+
+```bash
+./try_workflow.sh workflows/06_on_demand_trigger.yml
+```
+
+* **Workflow**: [06_on_demand_trigger.yml](workflows/06_on_demand_trigger.yml)
+* **References**:
+  * [repository_dispatch](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#repository_dispatch)
+  * [dispatch event](https://docs.github.com/en/rest/repos/repos#create-a-repository-dispatch-event)
+* An example of how to trigger a workflow on-demand using the GitHub API
+* Once the workflow is in place, you can trigger it with the following POST
+  request:
+
+```bash
+# curl \
+# -X POST \
+# -H "Accept: application/vnd.github+json" \
+# -H "Authorization: token <TOKEN>" \
+# <https://api.github.com/repos/OWNER/REPO/dispatches> \
+# -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
+```
+
+* Note that the `event_type` in the POST request must match one of the `types:`
+  strings set in the `repository_dispatch` trigger
+
 ## Attribution
 
 TODO
