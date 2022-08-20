@@ -38,7 +38,7 @@ files.
 ./try_workflow.sh workflows/03_needs.yml
 ```
 
-* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Sequentials%20Jobs/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Sequential%20Jobs/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [03_needs.yml](workflows/03_needs.yml)
 * **References**:
   * [jobs.<job_id>.needs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
