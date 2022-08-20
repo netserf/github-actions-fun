@@ -9,6 +9,8 @@ files.
 
 ## 1. Shell Executions with `run:`
 
+[![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Shell%20Commands/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+
 ```bash
 ./try_workflow.sh workflows/01_hello.yml
 ```
