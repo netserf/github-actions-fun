@@ -9,13 +9,12 @@ files.
 
 ## 1. Shell Executions with `run:`
 
-[![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Shell%20Commands/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
-
 ```bash
 ./try_workflow.sh workflows/01_hello.yml
 ```
 
 * **Workflow**: [01_hello.yml](workflows/01_hello.yml)
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Shell%20Commands/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Reference**: [jobs.<job_id>.steps[*].run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun)
 * A simple workflow that demonstrates the `run:` statement to execute shell
   commands
