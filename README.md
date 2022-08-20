@@ -7,14 +7,14 @@ simple `try_workflow.sh` script that copies only one workflow file to the
 `.github/workflow` directory for execution and clears out any old workflow
 files.
 
-## 1. Shell Executions with `run:`
+## 1. Shell Commands with `run:`
 
 ```bash
 ./try_workflow.sh workflows/01_hello.yml
 ```
 
-* **Workflow**: [01_hello.yml](workflows/01_hello.yml)
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Shell%20Commands/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [01_hello.yml](workflows/01_hello.yml)
 * **Reference**: [jobs.<job_id>.steps[*].run](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun)
 * A simple workflow that demonstrates the `run:` statement to execute shell
   commands
@@ -26,17 +26,19 @@ files.
 ./try_workflow.sh workflows/02_actions.yml
 ```
 
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Actions%20Workflow/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [02_actions.yml](workflows/02_actions.yml)
 * **Reference**: [jobs.<job_id>.steps[*].uses](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses)
 * A workflow that demonstrates the `uses:` statement to execute a GitHub Action
 * Publically available GitHub Actions may be found in the [Actions Marketplace](https://github.com/marketplace?type=actions)
 
-## 3. Serializing dependent steps with `needs:`
+## 3. Serializing dependent jobs with `needs:`
 
 ```bash
 ./try_workflow.sh workflows/03_needs.yml
 ```
 
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Sequentials%20Jobs/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [03_needs.yml](workflows/03_needs.yml)
 * **References**:
   * [jobs.<job_id>.needs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
@@ -53,6 +55,7 @@ files.
 ./try_workflow.sh workflows/04_checkout.yml
 ```
 
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Checkout%20Demo/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [04_checkout.yml](workflows/04_checkout.yml)
 * **References**:
   * [actions/checkout](https://github.com/actions/checkout)
@@ -63,12 +66,11 @@ files.
 ## 5. Trigger options for GitHub Actions
 
 ```bash
-
-```bash
-./try_workflow.sh workflows/05_on_trigger_options.yml
+./try_workflow.sh workflows/05_trigger_filters.yml
 ```
 
-* **Workflow**: [05_on_trigger_options.yml](workflows/05_on_trigger_options.yml)
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Trigger%20Filters/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [05_trigger_filters.yml](workflows/05_trigger_filters.yml)
 * **References**:
   * [trigger filters](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#using-filters)
 * An example that shows how to filter the GHA triggers so only a subset of
@@ -82,6 +84,7 @@ files.
 ./try_workflow.sh workflows/06_on_demand_trigger.yml
 ```
 
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/On%20Demand%20Trigger/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [06_on_demand_trigger.yml](workflows/06_on_demand_trigger.yml)
 * **References**:
   * [repository_dispatch](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#repository_dispatch)

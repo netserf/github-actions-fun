@@ -1,0 +1,13 @@
+---
+name: Trigger Filters
+
+on:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+
+jobs:
+  granular-triggers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: should run on the pull request types above
+        run: echo "trying out granular pull request triggers"

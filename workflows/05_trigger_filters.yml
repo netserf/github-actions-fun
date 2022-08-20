@@ -1,5 +1,5 @@
 ---
-name: Granular on Triggers
+name: Trigger Filters
 
 on:
   pull_request:
