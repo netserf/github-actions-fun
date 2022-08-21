@@ -105,6 +105,19 @@ curl \
 * Note that the `event_type` in the POST request must match one of the `types:`
   strings set in the `repository_dispatch` trigger
 
+## 7. Trigger options for GitHub Actions
+
+```bash
+./try_workflow.sh workflows/07_scheduled_trigger.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Scheduled%20Trigger/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [07_scheduled_trigger.yml](workflows/07_scheduled_trigger.yml)
+* **References**:
+  * [scheduled triggers](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule)
+* An example that shows how to trigger a workflow on a scheduled basis using
+  cron syntax
+
 ## Attribution
 
 TODO
