@@ -63,7 +63,7 @@ files.
   workflow can access it
 * Once of many ready-made GitHub Actions to simplify your workflow
 
-## 5. Trigger options for GitHub Actions
+## 5. Trigger filters
 
 ```bash
 ./try_workflow.sh workflows/05_trigger_filters.yml
@@ -105,7 +105,7 @@ curl \
 * Note that the `event_type` in the POST request must match one of the `types:`
   strings set in the `repository_dispatch` trigger
 
-## 7. Trigger options for GitHub Actions
+## 7. Scheduled triggers
 
 ```bash
 ./try_workflow.sh workflows/07_scheduled_trigger.yml
