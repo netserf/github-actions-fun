@@ -118,6 +118,20 @@ curl \
 * An example that shows how to trigger a workflow on a scheduled basis using
   cron syntax
 
+## 8. Environment Variables
+
+```bash
+./try_workflow.sh workflows/08_env_vars.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Environment%20Variables/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [08_env_vars.yml](workflows/08_env_vars.yml)
+* **References**:
+  * [environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
+* An example that shows how to use environment variables in a workflow 
+* Environment variables can be set at the workflow level, the job level, or at
+  the step level
+
 ## Attribution
 
 TODO
