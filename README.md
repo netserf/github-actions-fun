@@ -132,6 +132,20 @@ curl \
 * Environment variables can be set at the workflow level, the job level, or at
   the step level
 
+## 9. Secrets
+
+```bash
+./try_workflow.sh workflows/09_secrets.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Secrets/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [09_secrets.yml](workflows/09_secrets.yml)
+* **References**:
+  * [secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+* An example that shows how to load secrets configured in your repository
+  into your workflow
+
+
 ## Attribution
 
 TODO
