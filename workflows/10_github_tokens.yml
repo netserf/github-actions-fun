@@ -1,4 +1,4 @@
-name: Playing with GITHUB_TOKEN
+name: GitHub Tokens
 
 on: [pull_request]
 
