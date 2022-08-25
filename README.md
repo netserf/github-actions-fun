@@ -145,6 +145,18 @@ curl \
 * An example that shows how to load secrets configured in your repository
   into your workflow
 
+## 10. GitHub Tokens
+
+```bash
+./try_workflow.sh workflows/10_github_tokens.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/GitHub%20Tokens/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [10_github_tokens.yml](workflows/10_github_tokens.yml)
+* **References**:
+  * [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
+* An example of how you can use a GITHUB_TOKEN secret in your workflow when
+  you need to authenticate in a workflow run 
 
 ## Attribution
 
