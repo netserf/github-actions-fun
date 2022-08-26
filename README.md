@@ -158,6 +158,28 @@ curl \
 * An example of how you can use a GITHUB_TOKEN secret in your workflow when
   you need to authenticate in a workflow run 
 
+## 11. Decrypt GPG-encrypted files
+
+```bash
+./try_workflow.sh workflows/11_decrypt_gpg.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Decrypte%20GPG/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [11_github_tokens.yml](workflows/11_github_tokens.yml)
+* **References**:
+  * TODO
+* An example of how you can ...
+* Assuming you have your gpg keys configured, you can use the following command
+  to encrypt the file:
+
+```bash
+gpg --symmetric --cipher-algo AES256 my_secret.json
+```
+
+* Your GPG_PASSPHRASE will be configured in the repository's secrets
+  
+
+
 ## Attribution
 
 TODO
