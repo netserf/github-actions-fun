@@ -128,7 +128,7 @@ curl \
 * **Workflow**: [08_env_vars.yml](workflows/08_env_vars.yml)
 * **References**:
   * [environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
-* An example that shows how to use environment variables in a workflow 
+* An example that shows how to use environment variables in a workflow
 * Environment variables can be set at the workflow level, the job level, or at
   the step level
 
@@ -156,7 +156,7 @@ curl \
 * **References**:
   * [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
 * An example of how you can use a GITHUB_TOKEN secret in your workflow when
-  you need to authenticate in a workflow run 
+  you need to authenticate in a workflow run
 
 ## 11. Decrypt GPG-encrypted files
 
@@ -167,19 +167,20 @@ curl \
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Decrypte%20GPG/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [11_github_tokens.yml](workflows/11_github_tokens.yml)
 * **References**:
-  * TODO
-* An example of how you can ...
-* Assuming you have your gpg keys configured, you can use the following command
-  to encrypt the file:
+  * [GPG-encrypted files](https://www.gnupg.org/gph/en/manual/x110.html)
+* An example of how you can unencrypt a GPG-encrypted file in your workflow
+* This is using a simple symmetric cipher to perform the encryption
+* The [my_secret_json.gpg](my_secret_json.gpg) file was encrypted using a
+  passphrase to protect the secret. The following command performs the
+  encryption:
 
 ```bash
 gpg --symmetric --cipher-algo AES256 my_secret.json
 ```
 
-* Your GPG_PASSPHRASE will be configured in the repository's secrets
+* The GPG_PASSPHRASE is configured in the repository's secrets so that it may
+  be used in the workflow to unecrypt the file
   
-
-
 ## Attribution
 
 TODO
