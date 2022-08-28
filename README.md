@@ -164,7 +164,7 @@ curl \
 ./try_workflow.sh workflows/11_decrypt_gpg.yml
 ```
 
-* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Decrypte%20GPG/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Decrypt%20GPG/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [11_github_tokens.yml](workflows/11_github_tokens.yml)
 * **References**:
   * [GPG-encrypted files](https://www.gnupg.org/gph/en/manual/x110.html)
