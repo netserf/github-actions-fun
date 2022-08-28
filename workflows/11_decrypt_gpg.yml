@@ -1,9 +1,6 @@
-name: Decrypt GPG encrypted file
+name: Decrypt GPG
 
 on: [pull_request]
-
-# encrypt file with: gpg --symmetric --cipher-algo AES256 my_secret.json
-# configure GPG_PASSPHRASE in repo settings
 
 jobs:
   decrypt:
