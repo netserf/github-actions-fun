@@ -180,7 +180,22 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 
 * The GPG_PASSPHRASE is configured in the repository's secrets so that it may
   be used in the workflow to unecrypt the file
-  
+
+## 12. Contexts
+
+```bash
+./try_workflow.sh workflows/12_contexts.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Contexts/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [12_contexts.yml](workflows/12_contexts.yml)
+* **References**:
+  * [Contexts](https://docs.github.com/en/actions/learn-github-actions/contexts)
+* An example workflow showing various GHA contexts
+* Contexts provide access to information about workflow runs, runner
+  environments, jobs, and steps. Each context is an object that contains
+  properties, which can be strings or other objects.
+
 ## Attribution
 
 TODO
