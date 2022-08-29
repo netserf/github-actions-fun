@@ -1,0 +1,22 @@
+name: Contexts
+# illustrates contexts to access github actions objects
+
+on: push
+
+jobs:
+  dump-contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: dump job context
+        run: echo '${{ toJSON(job) }}'
+      - name: dump steps context
+        run: echo '${{ toJSON(steps) }}'
+      - name: dump runner context
+        run: echo '${{ toJSON(runner) }}'
+      - name: dump strategy context
+        run: echo '${{ toJSON(strategy) }}'
+      - name: dump matrix context
+        run: echo '${{ toJSON(matrix) }}'
