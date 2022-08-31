@@ -196,6 +196,20 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
   environments, jobs, and steps. Each context is an object that contains
   properties, which can be strings or other objects.
 
+## 13. Functions
+
+```bash
+./try_workflow.sh workflows/13_functions.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Functions/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [13_functions.yml](workflows/13_functions.yml)
+* **References**:
+  * [Functions](https://docs.github.com/en/actions/learn-github-actions/expressions#functions)
+* An example workflow showing some of the GHA functions available
+* The number of functions is limited, so you consider other tooling if you need
+  more functionality
+
 ## Attribution
 
 TODO
