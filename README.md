@@ -210,6 +210,20 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * The number of functions is limited, so you consider other tooling if you need
   more functionality
 
+## 14. Conditional Steps
+
+```bash
+./try_workflow.sh workflows/14_conditionals.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Conditionals/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [14_conditionals.yml](workflows/14_conditionals.yml)
+* **References**:
+  * [jobs.<job_id>.if](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idif)
+  * [Status Checks](https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions)
+* An example workflow showing how you can use conditional steps to control
+  whether subsequent steps execute
+
 ## Attribution
 
 TODO
