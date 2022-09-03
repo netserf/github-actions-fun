@@ -224,6 +224,21 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * An example workflow showing how you can use conditional steps to control
   whether subsequent steps execute
 
+## 15. Matrix Strategy
+
+```bash
+./try_workflow.sh workflows/15_matrix_strategy.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Matrix%20Strategy/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [15_matrix_strategy.yml](workflows/15_matrix_strategy.yml)
+* **References**:
+  * [Matrix Strategy](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs)
+* An example workflow showing how a matrix strategy can define a single job that
+  automatically creates multiple jobs based on the matrix values
+* Very useful when you need to run test code against multiple versions and/or
+  operating systems
+
 ## Attribution
 
 TODO
