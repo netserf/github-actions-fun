@@ -239,6 +239,20 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * Very useful when you need to run test code against multiple versions and/or
   operating systems
 
+## 16. Containers
+
+```bash
+./try_workflow.sh workflows/16_containers.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [16_containers.yml](workflows/16_containers.yml)
+* **References**:
+  * [Job in a container](https://docs.github.com/en/actions/using-jobs/running-jobs-in-a-container)
+* An example workflow showing how to run a GHA job inside a container
+* An option to consider if you need a container environment or a specialized
+  environment beyond the standard GHA runners available
+
 ## Attribution
 
 TODO
