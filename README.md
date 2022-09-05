@@ -248,10 +248,26 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [16_containers.yml](workflows/16_containers.yml)
 * **References**:
+  * [jobs.<job_id>.container](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idcontainer)
   * [Job in a container](https://docs.github.com/en/actions/using-jobs/running-jobs-in-a-container)
 * An example workflow showing how to run a GHA job inside a container
 * An option to consider if you need a container environment or a specialized
   environment beyond the standard GHA runners available
+
+## 17. Multiple Containers
+
+```bash
+./try_workflow.sh workflows/17_multi_containers.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Multiple%20Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [17_multi_containers.yml](workflows/17_multi_containers.yml)
+* **References**:
+  * [jobs.<job_id>.services](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idservices)
+* An example workflow showing how to run a GHA job with a set of container-based
+  services
+* An option to consider when testing a job that requires a backend service
+  (e.g. API + database)
 
 ## Attribution
 
