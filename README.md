@@ -269,6 +269,20 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * An option to consider when testing a job that requires a backend service
   (e.g. API + database)
 
+## 18. Customize Containers
+
+```bash
+./try_workflow.sh workflows/18_customize_containers.yml
+
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Customize%20Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [18_customize_containers.yml](workflows/18_customize_containers.yml)
+* **References**:
+  * [Customize Containers](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses)
+* An example workflow showing how you can further customize a container image
+  taken from Docker Hub and used in a GHA step
+
 ## Attribution
 
 TODO
