@@ -1,4 +1,4 @@
-name: Script in Container
+name: Override Entrypoint
 on: push
 
 jobs:
