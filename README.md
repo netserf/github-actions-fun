@@ -279,9 +279,22 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Customize%20Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
 * **Workflow**: [18_customize_containers.yml](workflows/18_customize_containers.yml)
 * **References**:
-  * [Customize Containers](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses)
+  * [jobs.<job_id>.steps\[*\].uses](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses)
 * An example workflow showing how you can further customize a container image
   taken from Docker Hub and used in a GHA step
+
+## 19. Override Entrypoint
+
+```bash
+./try_workflow.sh workflows/19_override_entrypoint.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Override%20Entrypoint/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [19_override_entrypoint.yml](workflows/19_override_entrypoint.yml)
+* **References**:
+* [jobs.<job_id>.steps[*].with.entrypoint](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepswithentrypoint)
+* An example workflow using a container image which overrides the default
+  entrypoint with a local script
 
 ## Attribution
 
