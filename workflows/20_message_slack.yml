@@ -1,4 +1,4 @@
-name: Container to Slack
+name: Message Slack
 on: push
 
 jobs:

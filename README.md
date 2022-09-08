@@ -273,7 +273,6 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 
 ```bash
 ./try_workflow.sh workflows/18_customize_containers.yml
-
 ```
 
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Customize%20Containers/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
@@ -295,6 +294,18 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * [jobs.<job_id>.steps[*].with.entrypoint](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepswithentrypoint)
 * An example workflow using a container image which overrides the default
   entrypoint with a local script
+
+## 20. Message Slack
+
+```bash
+./try_workflow.sh workflows/20_message_slack.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Message%20Slack/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [20_message_slack.yml](workflows/20_message_slack.yml)
+* **References**:
+* [A container for sending Slack messages](https://github.com/technosophos/slack-notify)
+* An example workflow using a custom container image to send Slack messages
 
 ## Attribution
 
