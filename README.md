@@ -307,6 +307,10 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * [A container for sending Slack messages](https://github.com/technosophos/slack-notify)
 * An example workflow using a custom container image to send Slack messages
 
-## Attribution
+## Attributions
 
-TODO
+* Many of these examples are based on the lessons from Udemy's
+  [The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/course/github-actions/)
+  authored by [Ali Alaa](https://www.udemy.com/course/github-actions/#instructor-1).
+  * This is an excellent course.
+  * Highly recommend if you want to learn more about GitHub Actions.

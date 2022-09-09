@@ -1,0 +1,39 @@
+---
+name: Shell Commands
+
+on: [push, pull_request]
+
+jobs:
+  simple-linux-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello with bash shell
+        run: echo "Hello World from GitHub Actions (default bash shell)"
+      - name: try multi-line with bash shell
+        run: |
+          echo "Hello World multi-line 1"
+          echo "Hello World multi-line 2"
+          echo "Hello World multi-line 3"
+      - name: say hello with python as the shell
+        run: |
+          import sys
+          print("Hello World from python")
+          print(f"python version: {sys.version}")
+        shell: python
+  simple-windows-shell-commands:
+    runs-on: windows-latest
+    steps:
+      - name: say hello with powershell
+        run: |
+          Write-Host "Hello World from GitHub Actions (default powershell)"
+      - name: try multi-line with powershell
+        run: |
+          Write-Host "Hello World multi-line 1"
+          Write-Host "Hello World multi-line 2"
+          Write-Host "Hello World multi-line 3"
+      - name: say hello with python as the shell
+        run: |
+          import sys
+          print("Hello World from python")
+          print(f"python version: {sys.version}")
+        shell: python
