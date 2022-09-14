@@ -63,5 +63,5 @@ jobs:
         run: |
           import sys
           print("Hello World from python")
-          print(f"python version: {sys.version}")
+          print("python version: {}".format(sys.version))
         shell: python
