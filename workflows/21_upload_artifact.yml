@@ -1,0 +1,21 @@
+name: Upload Artifact
+on: push
+
+jobs:
+  docker-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3.0.2
+
+      - name: Create directory for artifacts
+        run: mkdir -p artifacts
+
+      - name: Copy files to artifacts directory
+        run: cp script.sh artifacts/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: my-artifact
+          path: artifact/
