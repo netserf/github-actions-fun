@@ -8,8 +8,22 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Upload artifacts
+      - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: my-linux-script
           path: ./script.sh
+
+  test-artifact:
+    runs-on: ubuntu-latest
+    needs: [upload-artifact]
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-linux-script
+
+      - name: Run script
+        run: |
+          echo "Test artifact script:"
+          ./script.sh
