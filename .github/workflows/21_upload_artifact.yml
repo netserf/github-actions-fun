@@ -4,7 +4,7 @@ on: push
 jobs:
   upload-artifact:
     env:
-      ARTIFACT_DIR: "artifacts"
+      ARTIFACT_DIR: "${GITHUB_WORKSPACE}/artifacts"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
