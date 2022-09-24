@@ -3,21 +3,27 @@ on: push
 
 jobs:
   upload-artifact:
-    env:
-      ARTIFACT_DIR: "artifacts"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.0.2
-
-      - name: Create directory for artifacts
-        run: mkdir -p ${ARTIFACT_DIR}
-
-      - name: Copy files to artifacts directory
-        run: cp script.sh ${ARTIFACT_DIR}/
+        uses: actions/checkout@v3
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: ${ARTIFACT_DIR}/
+          name: my-linux-script
+          path: ./script.sh
+
+  test-artifact:
+    runs-on: ubuntu-latest
+    needs: [upload-artifact]
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-linux-script
+
+      - name: Run script
+        run: |
+          echo "Test artifact script:"
+          ./script.sh

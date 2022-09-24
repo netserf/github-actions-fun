@@ -320,6 +320,8 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * [Download Artifact](https://github.com/actions/download-artifact)
 * An example showing how you can upload artifacts from your workflow to share
   data between jobs and store data once a workflow is complete.
+* Note that the uploaded artifact is available for 90 days and it can be found
+  in the `Actions` tab, at the bottom of the workflow's summary page.
 
 ## Attributions
 
