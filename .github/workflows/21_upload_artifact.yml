@@ -10,11 +10,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3.0.2
 
-      - name: Create directory for artifacts
-        run: mkdir -p ${ARTIFACT_DIR}
-
-      - name: Copy files to artifacts directory
+      - name: Copy files to temporary artifacts directory
         run: |
+          mkdir -p ${ARTIFACT_DIR}
           cp script.sh ${ARTIFACT_DIR}/
           ls -l ${ARTIFACT_DIR}/
 
@@ -22,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
           name: my-artifacts
-          path: ${ARTIFACT_DIR}/
+          path: ${ARTIFACT_DIR}/script.sh
