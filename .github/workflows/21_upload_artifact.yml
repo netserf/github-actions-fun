@@ -3,24 +3,24 @@ on: push
 
 jobs:
   upload-artifact:
-    env:
-      ARTIFACT_DIR: "/tmp/artifacts"
+#    env:
+#      ARTIFACT_DIR: "/tmp/artifacts"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Copy files to temporary artifacts directory
-        run: |
-          mkdir -p ${ARTIFACT_DIR}
-          cp script.sh ${ARTIFACT_DIR}/
-          echo "Show directory contents:"
-          cd ${ARTIFACT_DIR}
-          pwd
-          ls -l ${ARTIFACT_DIR}/
+#      - name: Copy files to temporary artifacts directory
+#        run: |
+#          mkdir -p ${ARTIFACT_DIR}
+#          cp script.sh ${ARTIFACT_DIR}/
+#          echo "Show directory contents:"
+#          cd ${ARTIFACT_DIR}
+#          pwd
+#          ls -l ${ARTIFACT_DIR}/
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: my-artifacts
-          path: ${ARTIFACT_DIR}/*
+          path: ./script.sh
