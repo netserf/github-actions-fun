@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifacts
-          path: ${ARTIFACT_DIR}/script.sh
+          path: ${ARTIFACT_DIR}/*
