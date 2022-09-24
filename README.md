@@ -307,6 +307,22 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 * [A container for sending Slack messages](https://github.com/technosophos/slack-notify)
 * An example workflow using a custom container image to send Slack messages
 
+## 21. Upload Artifact
+
+```bash
+./try_workflow.sh workflows/21_upload_artifact.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Upload%20Artifact/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [20_message_slack.yml](workflows/21_upload_artifact.yml)
+* **References**:
+* [Upload Artifact](https://github.com/actions/upload-artifact)
+* [Download Artifact](https://github.com/actions/download-artifact)
+* An example showing how you can upload artifacts from your workflow to share
+  data between jobs and store data once a workflow is complete.
+* Note that the uploaded artifact is available for 90 days and it can be found
+  in the `Actions` tab, at the bottom of the workflow's summary page.
+
 ## Attributions
 
 * Many of these examples are based on the lessons from Udemy's
