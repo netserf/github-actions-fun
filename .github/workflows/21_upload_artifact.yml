@@ -14,6 +14,9 @@ jobs:
         run: |
           mkdir -p ${ARTIFACT_DIR}
           cp script.sh ${ARTIFACT_DIR}/
+          echo "Show directory contents:"
+          cd ${ARTIFACT_DIR}
+          pwd
           ls -l ${ARTIFACT_DIR}/
 
       - name: Upload artifacts
