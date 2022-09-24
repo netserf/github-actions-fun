@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       - name: Copy files to temporary artifacts directory
         run: |
@@ -20,7 +20,7 @@ jobs:
           ls -l ${ARTIFACT_DIR}/
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v3
         with:
           name: my-artifacts
           path: ${ARTIFACT_DIR}/script.sh
