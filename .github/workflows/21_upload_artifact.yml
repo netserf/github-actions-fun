@@ -2,9 +2,9 @@ name: Upload Artifact
 on: push
 
 jobs:
-  env:
-    ARTIFACT_DIR: "artifacts"
   upload-artifact:
+    env:
+      ARTIFACT_DIR: "artifacts"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
