@@ -314,7 +314,7 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
 ```
 
 * **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Upload%20Artifact/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
-* **Workflow**: [20_message_slack.yml](workflows/21_upload_artifact.yml)
+* **Workflow**: [21_upload_artifact.yml](workflows/21_upload_artifact.yml)
 * **References**:
 * [Upload Artifact](https://github.com/actions/upload-artifact)
 * [Download Artifact](https://github.com/actions/download-artifact)
@@ -322,6 +322,20 @@ gpg --symmetric --cipher-algo AES256 my_secret.json
   data between jobs and store data once a workflow is complete.
 * Note that the uploaded artifact is available for 90 days and it can be found
   in the `Actions` tab, at the bottom of the workflow's summary page.
+
+## 22. Auto Merge
+
+```bash
+./try_workflow.sh workflows/22_auto_merge.yml
+```
+
+* **Status**: [![Actions Status](https://github.com/netserf/github-actions-fun/workflows/Auto%20Merge/badge.svg)](https://github.com/netserf/github-actions-fun/actions)
+* **Workflow**: [22_auto_merge.yml](workflows/22_auto_merge.yml)
+* **References**:
+* [Auto Approve](https://github.com/hmarr/auto-approve-action)
+* [Merge PR](https://github.com/managedkaos/merge-pull-request)
+* An example showing how you can auto-approve and auto-merge a PR using GHA
+* Note that this will only work if the PR is opened by github.actor `netserf`.
 
 ## Attributions
 

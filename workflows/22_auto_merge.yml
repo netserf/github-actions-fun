@@ -1,0 +1,20 @@
+name: Auto Merge
+on: pull_request
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    if: github.actor == 'netserf'
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3.0.2
+
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v2.4.0
+        with:
+          review-message: "Auto approved automated PR"
+
+      - name: Auto merge pull request
+        uses: managedkaos/merge-pull-request@v2.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
